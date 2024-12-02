@@ -49,15 +49,13 @@ void arc_anim_cb(void *arc, int32_t value) {
 }
 
 void update_speed(int new_speed) {
-    static char mph_text[8];
+    static char mph_text[3];
     snprintf(mph_text, sizeof(mph_text), "%d", new_speed);
     lv_label_set_text(mph_label, mph_text); 
 }
 
-void update_gear(int new_gear) {
-    static char gear_text[8];
-    snprintf(gear_text, sizeof(gear_text), "%d", new_gear);
-    lv_label_set_text(mph_label, gear_text); 
+void update_gear(char new_gear[2]) {
+    lv_label_set_text(gear_label, new_gear); 
 }
 
 void update_rpm(int new_rpm) {
@@ -243,5 +241,8 @@ void Build_UI(void){
     make_speed_digital();
     make_gear();
 
+    // Setting values with update functions
     update_rpm(3500);
+    update_speed(34);
+    update_gear("2");
 }

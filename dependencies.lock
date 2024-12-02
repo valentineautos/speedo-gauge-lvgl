@@ -1,0 +1,17 @@
+dependencies:
+  idf:
+    source:
+      type: idf
+    version: 5.3.1
+  lvgl/lvgl:
+    dependencies: []
+    source:
+      path: C:\Users\hello\OneDrive\Desktop\ESP-IDF\ESP32-S3-Touch-LCD-2.1\components\lvgl__lvgl
+      type: local
+    version: 8.2.0
+direct_dependencies:
+- idf
+- lvgl/lvgl
+manifest_hash: 7bf1fb2108074131d59b17ccc7087a480d4e6f0c05824312faeffc8b6bc2915d
+target: esp32s3
+version: 2.0.0
